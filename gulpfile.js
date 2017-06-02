@@ -1,5 +1,9 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch');
+watch = require('gulp-watch'),
+postcss = require('gulp-postcss'),
+autoprefixer =require('autoprefixer'),
+cssvars = require('postcss-simple-vars'),
+nested = require('postcss-nested');
 
  // When making multiple variables, you DONT have to add VAR every time, just add a comma and continue on as seen ABOVE!
 
@@ -12,7 +16,9 @@ gulp.task('html', function() {
 });
 
 gulp.task('styles', function() {
-  console.log('Imagine Sass or PostCSS tasks running here.');
+  return gulp.src('./app/assets/styles/styles.css')
+  .pipe(postcss([cssvars, nested, autoprefixer]))
+  .pipe(gulp.dest('./app/temp/styles'));
 });
 
 gulp.task('watch', function() {

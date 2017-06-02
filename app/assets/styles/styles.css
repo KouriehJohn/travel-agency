@@ -1,6 +1,18 @@
+$mainBlue: #2f557s;
+
 body {
+  color: $mainBlue;
   font-family: 'Roboto', sans-serif;
   color: #333;
+  columns: 300px 2;
+}
+
+box {
+  a {
+    display: block;
+    padding: 10px;
+    /* NOT valid CSS, postCSS is going to modify.*/
+  }
 }
 
 img {

@@ -1,7 +1,17 @@
 body {
+  color: #2f557s;
   font-family: 'Roboto', sans-serif;
   color: #333;
+  -webkit-columns: 300px 2;
+     -moz-columns: 300px 2;
+          columns: 300px 2;
 }
+
+box a {
+    display: block;
+    padding: 10px;
+    /* Nested css = NOT valid CSS, postCSS is going to modify. if seen in TEMP folder ignore this comment*/
+  }
 
 img {
   max-width: 100%;
