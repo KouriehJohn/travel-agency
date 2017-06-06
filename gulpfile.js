@@ -1,10 +1,11 @@
 var gulp = require('gulp'),
 watch = require('gulp-watch'),
 postcss = require('gulp-postcss'),
-autoprefixer =require('autoprefixer'),
+autoprefixer = require('autoprefixer'),
 cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
-cssImport = require('postcss-import');
+cssImport = require('postcss-import'),
+browserSync = require('browser-sync').create();
 
  // When making multiple variables, you DONT have to add VAR every time, just add a comma and continue on as seen ABOVE!
 
@@ -23,6 +24,12 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
+
+  browserSync.init({
+    server: {
+      baseDir: "app"
+    }
+  });
 
   watch('./app/index.html', function() {
     gulp.start('html');
