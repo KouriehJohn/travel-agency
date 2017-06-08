@@ -6,6 +6,7 @@
 @import "modules/_btn";
 @import "modules/_wrapper";
 @import "modules/_page-section";
+@import "modules/_headline";
 
 /* Imports NEED to be at the very TOP of the file.*/
 /* Also a file starting with an _underscore USUALLY indicate to other devs that that file is a PARTIAL file and NOT a complete file to be used by itself. */
