@@ -459,6 +459,11 @@ img {
   height: auto;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .large-hero {
   border-bottom: 10px solid #2f5572;
   position: relative;
@@ -559,6 +564,7 @@ img {
   }
 
 .wrapper {
+  overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
   max-width: 1200px;
@@ -576,8 +582,15 @@ img {
   }
 
 .page-section {
-  padding: 4.5rem 0;
+  padding: 1.2rem 0;
 }
+
+@media (min-width: 800px) {
+
+.page-section {
+    padding: 4.5rem 0
+}
+  }
 
 .page-section--blue {
     background-color: #2f5572;
@@ -629,6 +642,34 @@ img {
 
 .headline--b-margin-large {
     margin-bottom: 1.6em;
+  }
+
+.row::after {
+    content: "";
+    clear:both;
+    display: table;
+  }
+
+.row--gutters {
+    margin-right: -65px;
+  }
+
+.row--gutters > div {
+    padding-right: 65px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+@media (min-width: 800px) {
+    .row__medium-4 {
+      float: left;
+      width: 33.33%;
+    }
+
+    .row__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
   }
 
 /* Imports NEED to be at the very TOP of the file.*/
