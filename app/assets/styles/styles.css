@@ -14,7 +14,8 @@
 @import "modules/_testimonial";
 @import "modules/_sprite";
 @import "modules/_site-footer";
-
+@import "modules/_site-header";
+@import "modules/_primary-nav";
 
 /* Imports NEED to be at the very TOP of the file.*/
 /* Also a file starting with an _underscore USUALLY indicate to other devs that that file is a PARTIAL file and NOT a complete file to be used by itself. */
